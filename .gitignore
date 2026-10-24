@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# PyTorch / ML model files
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.pkl.gz
+models/
+checkpoints/
+
+# Data — never commit raw datasets
+data/raw/
+data/mvtec/
+data/datasets/
+*.zip
+*.tar.gz
+*.tgz
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.lcov
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Results / output (too large for git)
+reports/figures/
+reports/annotated_frames/
+results/
+outputs/
+
+# Profiling
+*.prof
+*.lprof
+
+# Logs
+*.log
+
+# Windows-specific
+desktop.ini
+$RECYCLE.BIN/

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "defectdetect"
+version = "0.1.0"
+description = "Industrial visual anomaly detection — PatchCore + classical baseline on MVTec AD"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Sherif Abd El-Rady" }]
+
+dependencies = [
+    "numpy>=1.26",
+    "opencv-python>=4.9",
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "matplotlib>=3.8",
+    "scikit-learn>=1.4",
+    "scipy>=1.13",
+    "Pillow>=10.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0",
+    "nbformat>=5.9",
+    "nbclient>=0.9",
+    "pytest>=8.0",
+    "pytest-cov",
+]
+
+[project.scripts]
+defectdetect-train   = "defectdetect.cli:train"
+defectdetect-predict = "defectdetect.cli:predict"
+
+[tool.setuptools.packages.find]
+where = ["src"]
